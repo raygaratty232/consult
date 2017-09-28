@@ -832,11 +832,31 @@ input::-webkit-inner-spin-button {
         display: none;
     }
 }
+@media only screen and (max-width: 510px){
+    .milestones-scale li {
+        font-size: 10px;
+    }
+    .milestones-scale a:hover {
+        height: 28px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .milestones-scale a:hover {
+        height: 24px;
+    }
+    .milestones-scale li {
+        font-size: 9px;
+    }
+}
 @media only screen and (max-width: 375px){
     .about-block img{
         width: 110%;
     }
+    .milestones-scale li {
+        font-size: 8px;
+    }
 }
+
 @media only screen and (max-width: 320px){
     .logo{
         right: 10px;
