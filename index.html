@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="feature-carousel.css">
-    </script>
 </head>
 
 <body>
@@ -25,7 +23,7 @@
                 <div class="wrapper-nav">
                     <nav class="top_nav">
                         <div class="menuTogle">
-                            <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+                            <i class="fa fa-th-list fa-3x" aria-hidden="true"></i>
                         </div>
                         <ul class="menu">
                             <li><a href="#top">Главная</a></li>
@@ -332,29 +330,17 @@
             </div>
         </div>
         <div class="reviews-form">
-            <div class="about">
+            <div class="reviews">
                 <div class="about-caption">
                     <h2>Отзывы</h2>
                 </div>
-                <div id="about-carousel">
-                    <div>
+                <div id="reviews-carousel">
                         <img src="img/Photo.png" alt="">
-                    </div>
-                    <div>
                         <img src="img/Photo.png" alt="">
-                    </div>
-                    <div>
                         <img src="img/Photo.png" alt="">
-                    </div>
-                    <div>
                         <img src="img/Photo.png" alt="">
-                    </div>
-                    <div>
                         <img src="img/Photo.png" alt="">
-                    </div>
-                    <div>
                         <img src="img/Photo.png" alt="">
-                    </div>
                 </div>
             </div>
             <div class="form">
@@ -362,21 +348,24 @@
                     <h2>Заказать Обратный Звонок</h2>
                     <p>Оставьте Заявку И Мы Свяжемся С Вами</p>
                 </div>
-                <form action="#" class="form-bot" id="form">
-                    <label class="label-flex">
-                        <label>
-                            <p><input type="name" placeholder="Ваше имя"></p>
-                            <p><input type="number" placeholder="Ваш телефон"></p>
-                            <p><input type="email" placeholder="Email"></p>
-                        </label>
-                    <label>
-                            <textarea></textarea>
-                        </label>
-                    </label>
-                    <div class="form-btn">
-                        <button type="submit" class="submit">ОТПРАВИТЬ</button>
-                    </div>
-                </form>
+                <div class="form-container">
+                    <form action="#" class="form-bot" id="form">
+                        <div class="label-flex">
+                            <div class="input-container">
+                                <p><input type="name" placeholder="Ваше имя"></p>
+                                <p><input type="number" placeholder="Ваш телефон"></p>
+                                <p><input type="email" placeholder="Email"></p>
+                            </div>
+                            <div class="textarea-container">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                        <div class="form-btn">
+                            <button type="submit" class="submit">ОТПРАВИТЬ</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </main>
@@ -444,7 +433,7 @@
             $("#get-carousel").waterwheelCarousel({
 
             });
-            $("#about-carousel").waterwheelCarousel({
+            $("#reviews-carousel").waterwheelCarousel({
                 flankingItems: 1,
                 autoPlay: 5000
 
