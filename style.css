@@ -34,7 +34,7 @@ a{
     width: 100%;
     position: fixed;
     transform: translateY(100%);
-    transition: 0.5;
+    transition: 0.5s;
 }
 .headhesive--stick{
     transform: translateY(0);
@@ -189,6 +189,7 @@ a{
 }
 .content-right a{
     color: #727272;
+    font-size: 14px;
    
 }
 .head-button{
@@ -284,10 +285,12 @@ a{
     min-height: 470px;
 }
 .serves-item{
-    flex-basis: 250px;
+    max-width: 250px;
+    width: 100%;
 }
 .serves-item img{
-    width: 90%;
+    max-width: 100%;
+    width: 230px;
 }
 .serves-item a{
     display: block;
@@ -417,7 +420,7 @@ a{
 }
 .milestones-scale li{
     text-align: center;
-    flex-basis: 155px;
+    width: 13%;
 }
 .milestones-scale a{
     display: block;
@@ -427,10 +430,15 @@ a{
 .pane-block{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     max-width: 1120px;
     min-height: 275px;
     margin: auto;
     margin-top: 5%;
+}
+.pane-block img{
+    max-width: 100%;
+    width: 300px;
 }
 .pane-text h2{
     font-size: 30px;
@@ -530,12 +538,11 @@ a{
     text-align: center;
 }
 #get-carousel{
-    width: 660px;
-    height: 250px;
+    max-width: 660px;
+    min-height: 250px;
     margin: auto;
 }
 #get-carousel img{
-    display: hidden; 
     cursor: pointer;
     width: 200px;    
 }
@@ -549,9 +556,9 @@ a{
     margin: auto;
     margin-top: 5%;
 }
-.about{
+.reviews{
     max-width: 1920px;
-    min-height: 320px;
+    min-height: 540px;
 }
 .about-caption{
     max-width: 790px;
@@ -605,20 +612,31 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 1920px;
-    min-height: 900px;
+    min-height: 600px;
 }
-#about-carousel{
-    margin: -300px auto 100px;  
+#reviews-carousel{
+    height: 140px;
 }
-#about-carousel img{
+#reviews-carousel img{
     border-radius: 70px;
     cursor: pointer;
     width: 10%;
 }
+.form{
+    padding-top: 90px;
+}
 .form-caption{
     max-width: 615px;
-    min-height: 160px;
+    min-height: 90px;
     margin: auto;
+}
+.form-container{
+    max-width: 1280px;
+    margin: auto;
+}
+.input-container{
+    width: 100%;
+    max-width: 620px;
 }
 .form-caption h2{
     text-align: center;
@@ -628,17 +646,17 @@ a{
     text-align: center;
     font-size: 14px;
 }
-.form-bot{
-    max-width: 1280px;
-    margin: auto;
-}
+/*.form-bot{*/
+    /*max-width: 1280px;*/
+    /*margin: auto;*/
+/*}*/
 .label-flex{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .form-bot input{
-    width: 600px;
+    width: 100%;
     height: 70px;
     border-radius: 50px;
     color: #9c9a9a;
@@ -648,8 +666,13 @@ a{
     border: none;
     box-shadow: 1px 1px 10px 1px #000;
 }
+.textarea-container{
+    width: 100%;
+    max-width: 660px;
+    padding: 0 3%;
+}
 .form-bot textarea{
-    width: 600px;
+    width: 100%;
     height: 280px;
     border-radius: 20px;
     border: none;
@@ -728,6 +751,7 @@ input::-webkit-inner-spin-button {
     .content-left{
         margin: 0;
         padding: 0;
+        width: 100%;
     }
     .content-left p{
         margin: 0;
@@ -741,7 +765,7 @@ input::-webkit-inner-spin-button {
         display: none;
     }
     .left-top{
-        width: 750px;
+        width: 100%;
     }
     .left-text{
         margin: auto;
@@ -767,33 +791,65 @@ input::-webkit-inner-spin-button {
         display: block;
         cursor: pointer;
         position: absolute;
-        left: 50px;
-    }
-    .fa{
-        font-size: 20px;            
+        left: 20px;
     }
     .logo{
         position: absolute;
         top: 0;
         right: 100px;
     }
-    .left-top{
-        width: 420px;
-    }
     .left-text{
         margin: 0;
-    }
-    .left-bot{
-        margin-left: 0;
-    }
-    .left-bot {
-        text-align: left
+        width: 100%;
     }
     .content-left h1{
-        text-align: left;
+        text-align: center;
         font-size: 35px;
     }
     .left-text h2{
         font-size: 35px;
+    }
+}
+@media only screen and (max-width: 689px){
+    .head-button a{
+        font-size: 20px;
+    }
+    .head-button{
+        bottom: 153px;
+    }
+}
+@media only screen and (max-width: 597px){
+    .milestones-scale li{
+        font-size: 12px;
+    }
+    .milestones-scale a:before{
+        display: none;
+    }
+    .milestones-scale a:hover{
+        height: 34px;
+    }
+    .reviews-carousel{
+        display: none;
+    }
+}
+@media only screen and (max-width: 375px){
+    .about-block img{
+        width: 110%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .logo{
+        right: 10px;
+    }
+    .left-bot{
+        margin: 0;
+    }
+    .left-text p:before,
+    .left-text p:after{
+        display: none;
+    }
+    .servis-caption:before,
+    .servis-caption:after{
+        display: none;
     }
 }
